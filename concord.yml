@@ -1,3 +1,7 @@
 flows:
   default:
-  - log: "Hello Concord User"
+  - form: myForm
+    fields:
+      - name: { type: "string", value: "${initiator.displayName}" }
+
+  - log: "${myForm}"
